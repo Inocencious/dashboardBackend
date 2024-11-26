@@ -1,5 +1,5 @@
 const userData: Record<string, {data: object; monthlyData: object[], savingGoals: object[], transactions: object[]}> = {
-    'inocencioken5@gmail.com': {
+    'morleyc@gmail.com': {
       data:
         { totalBalance: 30700, totalSavings: 19300, totalExpense: 900 },
       monthlyData: [
