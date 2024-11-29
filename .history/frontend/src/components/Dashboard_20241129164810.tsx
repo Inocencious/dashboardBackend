@@ -7,10 +7,8 @@ import SavingExpenseChart from "../graphs/SavingExpenseChart";
 import SavingGoal from "../graphs/SavingGoal";
 import TransactionHistory from "../graphs/TransactionHistory";
 import Navigation from "./Navigation";
-import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-    const navigate = useNavigate()
     
     const { data } = useData();
 
@@ -21,17 +19,10 @@ const Dashboard = () => {
   }, [data]); 
 
   if (!data) {
-    return (
-      <>
-        <div>User Does Not Exist</div>
-        <button className="border-2 px-2 py-1" onClick={()=>navigate("/")}>Sign In Again</button>
-      </>
-      
-    );
+    return <div>Loading...</div>;
   }
 
   return (
-    <>
     <Navigation></Navigation>
     <div className="px-8 py-8 h-screen">
       <div className="lg:flex w-full gap-8  h-full">
@@ -129,8 +120,6 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-    </>
-    
   );
 };
 

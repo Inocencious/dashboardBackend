@@ -24,7 +24,7 @@ const Dashboard = () => {
     return (
       <>
         <div>User Does Not Exist</div>
-        <button className="border-2 px-2 py-1" onClick={()=>navigate("/")}>Sign In Again</button>
+        <button onClick={()=>navigate("/login")}>Sign In Again</button>
       </>
       
     );
